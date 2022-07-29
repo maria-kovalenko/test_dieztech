@@ -1,18 +1,18 @@
-@import url(https://fonts.googleapis.com/css2?family=Mulish:wght@500;600;700;800&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap);
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box
 }
 body {
-  min-width: 390px;
+  min-width: 375px;
   max-width: 1920px;
   margin: 0 auto;
   padding: 0;
-  font-size: 18px;
-  line-height: 120%;
-  font-family: Mulish,sans-serif;
-  font-weight: 500;
-  color: #664b42;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto,sans-serif;
+  font-weight: 400;
+  color: #000;
   background-color: #fff
 }
 img {
@@ -27,50 +27,29 @@ ul {
 a {
   text-decoration: none;
   cursor: pointer;
-  color: #664b42
+  color: #000
 }
 .button {
   display: inline-block;
+  margin-right: 5px;
   margin-bottom: 5px;
-  padding: 16px 26px;
+  padding: 17px 32px;
   vertical-align: middle;
   text-align: center;
-  font-size: 18px;
-  font-family: Mulish,sans-serif;
-  line-height: 120%;
-  font-weight: 700;
-  letter-spacing: -1%;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
   color: #fff;
-  background-color: #fd9f32;
+  background-color: #e04e39;
   border: none;
-  border-radius: 6px;
-  -webkit-box-shadow: 13px 4px 30px 0 rgba(203,173,149,.45);
-  box-shadow: 13px 4px 30px 0 rgba(203,173,149,.45);
+  border-radius: 5px;
   cursor: pointer
 }
-.button:hover {
-  -webkit-box-shadow: 13px 4px 30px 0 rgba(203,173,149,.45);
-  box-shadow: 13px 4px 30px 0 rgba(203,173,149,.45);
-  -webkit-box-shadow: 3px 4px 30px 0 rgba(203,173,149,.8);
-  box-shadow: 3px 4px 30px 0 rgba(203,173,149,.8)
-}
 button {
-  display: inline-block;
-  border: none;
-  background-color: transparent
+  border: none
 }
-.visually-hidden:not(:focus):not(:active),
-input[type=checkbox].visually-hidden,
-input[type=radio].visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden
+.container {
+  padding: 0 20px;
+  margin: 0 auto
 }
