@@ -330,19 +330,55 @@ input[type=radio].visually-hidden {
   bottom: 0;
   width: 168px
 }
-.profession-slider-navigation .swiper-button-next,
-.profession-slider-navigation .swiper-button-prev {
-  position: absolute;
-  width: 22px;
-  height: 11px;
-  color: #000
-}
 .profession-slider-navigation .swiper-button-next::after,
 .profession-slider-navigation .swiper-button-prev::after {
   font-size: 16px
 }
 .profession-slider-navigation .swiper-button-next {
-  color: #e04e39
+  width: 22px;
+  height: 12px
+}
+.profession-slider-navigation .swiper-button-next::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  border: 1px solid #e04e39;
+  border-width: 0 1px 1px 0;
+  padding: 3px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg)
+}
+.profession-slider-navigation .swiper-button-next::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  width: 22px;
+  height: 1px;
+  background-color: #e04e39
+}
+.profession-slider-navigation .swiper-button-prev {
+  width: 22px;
+  height: 11px
+}
+.profession-slider-navigation .swiper-button-prev::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  border: 1px solid #000;
+  border-width: 0 1px 1px 0;
+  padding: 3px;
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg)
+}
+.profession-slider-navigation .swiper-button-prev::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  width: 22px;
+  height: 1px;
+  background-color: #000
 }
 .page-footer {
   background-color: #58595b

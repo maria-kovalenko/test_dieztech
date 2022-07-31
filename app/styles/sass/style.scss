@@ -370,11 +370,6 @@ input[type="radio"].visually-hidden {
   width: 168px;
   .swiper-button-next,
   .swiper-button-prev {
-    position: absolute;
-    width: 22px;
-    height: 11px;
-    color: #000;
-
     &::after {
       font-size: 16px;
     }
@@ -382,7 +377,51 @@ input[type="radio"].visually-hidden {
 }
 
 .profession-slider-navigation .swiper-button-next {
-  color: $bg-red;
+  width: 22px;
+  height: 12px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    border: 1px solid $bg-red;
+    border-width: 0 1px 1px 0;
+    padding: 3px;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    width: 22px;
+    height: 1px;
+    background-color: $bg-red;
+  }
+}
+
+.profession-slider-navigation .swiper-button-prev {
+  width: 22px;
+  height: 11px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    border: 1px solid #000;
+    border-width: 0 1px 1px 0;
+    padding: 3px;
+    transform: rotate(135deg);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    width: 22px;
+    height: 1px;
+    background-color: #000;
+  }
 }
 
 .page-footer {
