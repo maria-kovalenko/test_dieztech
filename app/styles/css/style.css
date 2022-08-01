@@ -346,14 +346,13 @@ input[type=radio].visually-hidden {
   margin-bottom: 90px
 }
 .events__wrapper {
-  margin-left: -15px;
-  margin-right: -15px;
-  margin-top: -30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,285px);
+  gap: 30px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
 }
 .card {
   display: -webkit-box;
@@ -363,11 +362,8 @@ input[type=radio].visually-hidden {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  max-width: 285px;
   min-height: 445px;
-  margin-right: 15px;
-  margin-left: 15px;
-  margin-top: 30px;
+  max-width: 285px;
   padding: 15px;
   background-color: #fff
 }
