@@ -172,7 +172,8 @@ input[type=radio].visually-hidden {
 }
 @media (max-width:768px) {
   .page-header__navigation {
-    display: none
+    display: none;
+    margin-top: -50px
   }
 }
 .open {
@@ -310,7 +311,8 @@ input[type=radio].visually-hidden {
     flex-wrap: wrap;
     -webkit-box-align: start;
     -ms-flex-align: start;
-    align-items: flex-start
+    align-items: flex-start;
+    margin-bottom: 40px
   }
 }
 .title {
@@ -340,7 +342,7 @@ input[type=radio].visually-hidden {
   .page-main__title {
     position: relative;
     margin-right: 100px;
-    margin-bottom: 50px
+    margin-bottom: 35px
   }
   .page-main__title::before {
     position: absolute;
@@ -366,6 +368,14 @@ input[type=radio].visually-hidden {
   grid-template-columns: repeat(auto-fill,285px);
   gap: 30px
 }
+@media (max-width:1024px) {
+  .events__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-x: scroll
+  }
+}
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -374,7 +384,10 @@ input[type=radio].visually-hidden {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   min-height: 445px;
+  width: 285px;
   max-width: 285px;
   padding: 15px;
   background-color: #fff
