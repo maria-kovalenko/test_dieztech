@@ -30,7 +30,8 @@ a {
 }
 .button {
   display: inline-block;
-  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 5px;
   padding: 17px 32px;
   vertical-align: middle;
   text-align: center;
@@ -44,8 +45,8 @@ a {
   border-radius: 5px;
   cursor: pointer
 }
-.button:last-child {
-  margin-right: 0
+.button:first-child {
+  margin-left: 0
 }
 button {
   border: none
@@ -69,7 +70,7 @@ input[type=radio].visually-hidden {
   max-width: 1230px;
   margin: 0 auto
 }
-@media (max-width:1366px) {
+@media (max-width:1365px) {
   .container {
     width: 89%
   }
@@ -90,6 +91,9 @@ input[type=radio].visually-hidden {
   padding-top: 20px;
   padding-bottom: 20px
 }
+.page-header__toggle {
+  display: none
+}
 @media (max-width:768px) {
   .page-header__wrapper {
     display: block
@@ -107,6 +111,7 @@ input[type=radio].visually-hidden {
     align-items: center
   }
   .page-header__toggle {
+    display: block;
     position: relative;
     width: 31px;
     height: 23px;
@@ -167,8 +172,11 @@ input[type=radio].visually-hidden {
 }
 @media (max-width:768px) {
   .page-header__navigation {
-    display: block
+    display: none
   }
+}
+.open {
+  display: block
 }
 .navigation__list {
   display: -webkit-box;
@@ -223,6 +231,10 @@ input[type=radio].visually-hidden {
     background-color: #e04e39
   }
 }
+.navigation__buttons {
+  -ms-flex-negative: 0;
+  flex-shrink: 0
+}
 @media (max-width:1550px) {
   .navigation__buttons {
     margin-left: 50px
@@ -230,7 +242,8 @@ input[type=radio].visually-hidden {
 }
 @media (max-width:1200px) {
   .navigation__buttons {
-    margin-left: 25px
+    margin-left: 25px;
+    text-align: end
   }
 }
 @media (max-width:768px) {
@@ -247,8 +260,7 @@ input[type=radio].visually-hidden {
     padding: 12px 15px
   }
   .btn__useful {
-    min-width: 141px;
-    margin-right: 15px
+    min-width: 141px
   }
 }
 .btn__text {
@@ -340,6 +352,9 @@ input[type=radio].visually-hidden {
     background-color: #e04e39
   }
 }
+.page-main__button a {
+  margin-left: 0
+}
 .page-main__wrapper {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -349,10 +364,7 @@ input[type=radio].visually-hidden {
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fill,285px);
-  gap: 30px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center
+  gap: 30px
 }
 .card {
   display: -webkit-box;
@@ -394,7 +406,7 @@ input[type=radio].visually-hidden {
   margin: 0 0 50px
 }
 .profession-slider {
-  max-width: 100%;
+  width: 100%;
   height: 192px
 }
 .profession-slider-wrapper {
@@ -416,10 +428,10 @@ input[type=radio].visually-hidden {
   z-index: 1
 }
 .profession-slider-pagination .swiper-pagination.swiper-pagination-bullets {
-  width: 50px;
+  max-width: 200px;
   margin: 0 auto;
   bottom: 5px;
-  left: calc(50% - 25px)
+  left: calc(50% - 100px)
 }
 .profession-slider-pagination .swiper-pagination-bullet {
   width: 10px;
@@ -438,9 +450,9 @@ input[type=radio].visually-hidden {
 }
 .profession-slider-navigation {
   position: absolute;
-  left: calc(50% - 84px);
+  left: calc(50% - 100px);
   bottom: 0;
-  width: 168px
+  width: 200px
 }
 .profession-slider-navigation .swiper-button-next::after,
 .profession-slider-navigation .swiper-button-prev::after {
@@ -514,9 +526,15 @@ input[type=radio].visually-hidden {
 .page-footer__signature {
   margin-right: 358px
 }
+@media (max-width:768px) {
+  .page-footer__signature {
+    margin-right: 30px
+  }
+}
 .signature__text {
   margin: 0
 }
 .contacts__text {
-  margin: 0
+  margin: 0;
+  word-wrap: break-word
 }

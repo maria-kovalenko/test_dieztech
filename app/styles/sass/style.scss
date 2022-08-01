@@ -45,8 +45,8 @@ a {
 
 .button {
   display: inline-block;
-  margin-right: 20px;
-
+  margin-left: 20px;
+  margin-bottom: 5px;
   padding: 17px 32px;
   vertical-align: middle;
   text-align: center;
@@ -62,8 +62,8 @@ a {
   border-radius: 5px;
   cursor: pointer;
 
-  &:last-child {
-    margin-right: 0;
+  &:first-child {
+    margin-left: 0;
   }
 }
 
@@ -93,7 +93,7 @@ input[type="radio"].visually-hidden {
   margin: 0 auto;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1365px) {
   .container {
     width: 89%;
   }
@@ -113,6 +113,10 @@ input[type="radio"].visually-hidden {
   padding-bottom: 20px;
 }
 
+.page-header__toggle {
+  display: none;
+}
+
 @media (max-width: $tablet-width) {
   .page-header__wrapper {
     display: block;
@@ -125,6 +129,7 @@ input[type="radio"].visually-hidden {
   }
 
   .page-header__toggle {
+    display: block;
     position: relative;
     width: 31px;
     height: 23px;
@@ -182,8 +187,13 @@ input[type="radio"].visually-hidden {
 
 @media (max-width: $tablet-width) {
   .page-header__navigation {
-    display: block;
+    display: none;
+
   }
+}
+
+.open {
+  display: block;
 }
 
 .navigation__list {
@@ -238,6 +248,11 @@ input[type="radio"].visually-hidden {
     background-color: #e04e39;
   }
 }
+
+.navigation__buttons {
+  flex-shrink: 0;
+}
+
 @media (max-width: 1550px) {
   .navigation__buttons {
     margin-left: 50px;
@@ -247,6 +262,7 @@ input[type="radio"].visually-hidden {
 @media (max-width: 1200px) {
   .navigation__buttons {
     margin-left: 25px;
+    text-align: end;
   }
 }
 
@@ -268,7 +284,6 @@ input[type="radio"].visually-hidden {
 
   .btn__useful {
     min-width: 141px;
-    margin-right: 15px;
   }
 }
 
@@ -302,6 +317,8 @@ input[type="radio"].visually-hidden {
     width: auto;
   }
 }
+
+// -----------------------page-main---------------------
 
 .page-main__wrapper-bg {
   background-color: $bg-lightgray;
@@ -366,20 +383,23 @@ input[type="radio"].visually-hidden {
   }
 }
 
+.page-main__button a {
+  margin-left: 0;
+}
+
 .page-main__wrapper {
   padding-top: 60px;
   padding-bottom: 60px;
   margin-bottom: 90px;
 }
 
-.events {
-}
+// ----------------------events---------------------
 
 .events__wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, 285px);
   gap: 30px;
-  justify-content: center;
+  // justify-content: center;
 }
 
 .card {
@@ -415,6 +435,8 @@ input[type="radio"].visually-hidden {
   color: $bg-brown;
 }
 
+// -----------------------profession-slider---------------------
+
 .profession {
   margin-bottom: 90px;
 }
@@ -424,9 +446,11 @@ input[type="radio"].visually-hidden {
 }
 
 .profession-slider {
-  max-width: 100%;
+  width: 100%;
   height: 192px;
 }
+
+
 
 .profession-slider-wrapper {
   max-height: 140px;
@@ -449,11 +473,13 @@ input[type="radio"].visually-hidden {
   z-index: 1;
 }
 
+// ----------------------profession-slider-pagination---------------------
+
 .profession-slider-pagination .swiper-pagination.swiper-pagination-bullets {
-  width: 50px;
+  max-width: 200px;
   margin: 0 auto;
   bottom: 5px;
-  left: calc(50% - 25px);
+  left: calc(50% - 100px);
 }
 
 .profession-slider-pagination .swiper-pagination-bullet {
@@ -474,11 +500,13 @@ input[type="radio"].visually-hidden {
   border: none;
 }
 
+// ----------------------profession-slider-navigation---------------------
+
 .profession-slider-navigation {
   position: absolute;
-  left: calc(50% - 84px);
+  left: calc(50% - 100px);
   bottom: 0;
-  width: 168px;
+  width: 200px;
   .swiper-button-next,
   .swiper-button-prev {
     &::after {
@@ -535,6 +563,8 @@ input[type="radio"].visually-hidden {
   }
 }
 
+// -----------------------------page-footer---------------------------------
+
 .page-footer {
   background-color: $bg-darkgray;
 }
@@ -550,6 +580,8 @@ input[type="radio"].visually-hidden {
   font-weight: 300;
 }
 
+// ----------------------page-footer__signature---------------------
+
 .signature {
   width: 237px;
 }
@@ -558,10 +590,20 @@ input[type="radio"].visually-hidden {
   margin-right: 358px;
 }
 
+@media (max-width: $tablet-width) {
+  .page-footer__signature {
+    margin-right: 30px;
+  }
+}
+
 .signature__text {
   margin: 0;
+  
 }
+
+// ----------------------page-footer__contacts---------------------
 
 .contacts__text {
   margin: 0;
+  word-wrap: break-word;
 }
