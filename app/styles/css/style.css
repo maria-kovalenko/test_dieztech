@@ -236,7 +236,7 @@ input[type=radio].visually-hidden {
   -ms-flex-negative: 0;
   flex-shrink: 0
 }
-@media (max-width:1550px) {
+@media (min-width:1200px) {
   .navigation__buttons {
     margin-left: 50px
   }

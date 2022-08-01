@@ -253,13 +253,13 @@ input[type="radio"].visually-hidden {
   flex-shrink: 0;
 }
 
-@media (max-width: 1550px) {
+@media (min-width: $desktop-width) {
   .navigation__buttons {
     margin-left: 50px;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: $desktop-width) {
   .navigation__buttons {
     margin-left: 25px;
     text-align: end;
@@ -393,8 +393,6 @@ input[type="radio"].visually-hidden {
   padding-bottom: 60px;
   margin-bottom: 90px;
 }
-
-
 
 // ----------------------events---------------------
 
