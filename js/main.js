@@ -15,6 +15,14 @@ const swiperProfession = new Swiper(".profession-slider", {
   },
 
   spaceBetween: 30,
+  breakpoints: {
+    375: {
+      slidesPerView: 1,
+    },
+    500: {
+      slidesPerView: "auto",
+    },
+  },
 });
 
 // -------------slider events------------------
