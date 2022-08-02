@@ -458,6 +458,7 @@ input[type="radio"].visually-hidden {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  border-radius: 5px;
 }
 .profession-slider-text {
   position: absolute;
