@@ -468,7 +468,7 @@ input[type="radio"].visually-hidden {
 .profession-slider-pagination .swiper-pagination.swiper-pagination-bullets {
   max-width: 200px;
   margin: 0 auto;
-  bottom: 5px;
+  bottom: 0;
   left: calc(50% - 100px);
 }
 .profession-slider-pagination .swiper-pagination-bullet {
@@ -489,7 +489,7 @@ input[type="radio"].visually-hidden {
 .profession-slider-navigation {
   position: absolute;
   left: calc(50% - 100px);
-  bottom: 0;
+  bottom: 5px;
   width: 200px;
 }
 .profession-slider-navigation .swiper-button-next::after,
@@ -497,8 +497,8 @@ input[type="radio"].visually-hidden {
   font-size: 16px;
 }
 .profession-slider-navigation .swiper-button-next {
-  width: 22px;
-  height: 12px;
+  width: 30px;
+  height: 30px;
 }
 .profession-slider-navigation .swiper-button-next::before {
   position: absolute;
@@ -520,8 +520,8 @@ input[type="radio"].visually-hidden {
   background-color: #e04e39;
 }
 .profession-slider-navigation .swiper-button-prev {
-  width: 22px;
-  height: 11px;
+  width: 30px;
+  height: 30px;
 }
 .profession-slider-navigation .swiper-button-prev::before {
   position: absolute;
@@ -537,7 +537,7 @@ input[type="radio"].visually-hidden {
 .profession-slider-navigation .swiper-button-prev::after {
   position: absolute;
   content: "";
-  right: 0;
+  right: 8px;
   width: 22px;
   height: 1px;
   background-color: #000;
